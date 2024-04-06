@@ -158,39 +158,43 @@ class _VivenciaScreenState extends State<VivenciaScreen> {
               SizedBox(height: 10),
               SizedBox(height: 10),
               ElevatedButton(
-                onPressed: selectFoto,
-                child: Text('Seleccionar Foto'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
-                  onPrimary: Colors.white,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                ),
-              ),
+  onPressed: selectFoto,
+  child: Text('Seleccionar Foto'),
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+      EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
+    ),
+  ),
+),
               SizedBox(height: 10),
-              ElevatedButton(
-                onPressed: () {
-                  final vivencia = Vivencia(
-                    titulo: tituloController.text,
-                    fecha: fechaController.text,
-                    descripcion: descripcionController.text,
-                    foto: fotoPath ?? '',
-                  );
+             ElevatedButton(
+  onPressed: () {
+    final vivencia = Vivencia(
+      titulo: tituloController.text,
+      fecha: fechaController.text,
+      descripcion: descripcionController.text,
+      foto: fotoPath ?? '',
+    );
 
-                  guardarVivencia(vivencia);
-                },
-                child: Text('Guardar Datos'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
-                  onPrimary: Colors.white,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                ),
-              ),
+    guardarVivencia(vivencia);
+  },
+  child: Text('Guardar Datos'),
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+      EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
+    ),
+  ),
+),
             ],
           ),
         ),
