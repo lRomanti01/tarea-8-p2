@@ -135,7 +135,7 @@ class _VivenciaScreenState extends State<VivenciaScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                "assets/fotos/ligapokemon.jpg"), // Cambia "assets/background.jpg" por la ruta de tu imagen de fondo
+                "assets/fotos/ligapokemon.jpg"), 
             fit: BoxFit.cover,
           ),
         ),
